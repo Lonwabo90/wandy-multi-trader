@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Req: viewport meta tag needed so the mobile-friendly test and the
+         responsive CSS below actually take effect on real devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wandy Multi Trader | Home</title>
+
+    <!-- Req 8: favicon added to every HTML file in the project -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ============ HEADER: logo, business name, navigation ============ -->
+    <header>
+        <h1>Wandy Multi Trader</h1>
+        <img src="images/log.jpg" alt="Wandy Multi Trader logo" width="90" class="round">
+        <nav>
+            <ul>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="registration.html">Registration</a></li>
+                <li><a href="staff.html">Staff</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ============================================================
+         Req 4: NEW DIV element added to the home page.
+         Req 1: essential content for a mobile user - a quick-glance,
+         tap-to-call / tap-to-navigate info strip so a phone visitor
+         does not have to scroll through the full About text just to
+         find a phone number.
+         Req 9.d/9.bb/9.cc: this div uses the .mobile-info class which
+         is styled for mobile, tablet and desktop breakpoints, and its
+         h3 gets a text-shadow rule for readability.
+         ============================================================ -->
+    <div class="mobile-info">
+        <h3>Visit the stall today: 2887 Block H1, Aliwal North, 9750</h3>
+        <p>
+            <a href="tel:+27725923930">&#128222; 072 592 3930</a>
+            &nbsp;|&nbsp;
+            <a href="mailto:nowandilesamuel166@gmail.com">&#9993; Email us</a>
+        </p>
+    </div>
+
+    <!-- ============================================================
+         Req 5: FIGURE element wrapping the hero image, with a caption
+         describing the image for mobile and screen-reader users.
+         ============================================================ -->
+    <figure>
+        <img class="hero-image" src="images/other products.png" alt="Traditional African clothing displayed at the Wandy Multi Trader stall">
+        <figcaption>Authentic traditional attire, proudly handmade for the community.</figcaption>
+    </figure>
+
+    <main>
+        <div class="about-text">
+            <h2>About Wandy Multi Trader</h2>
+            <p><strong>Wandy Multi Trader</strong> is a vibrant street vendor located at 2887 Block H1,
+            Aliwal North. Our business specializes in authentic traditional African clothing and
+            accessories. We take pride in offering high-quality garments such as Shwe-Shwe dresses,
+            Dashiki outfits, and traditional wedding attire. All products are crafted with care, using
+            authentic fabrics and beads, to ensure cultural accuracy and aesthetic appeal.</p>
+
+            <p>Our stall is a cornerstone for community members seeking to celebrate their cultural
+            heritage through fashion, whether for daily wear or special occasions like weddings,
+            graduations, and cultural festivals. Our products are available in various sizes, and we
+            also accept custom orders, ensuring that every customer finds something that suits their
+            style and needs.</p>
+
+            <h3>Our Mission and Values</h3>
+            <p>At Wandy Multi Trader, our mission is to preserve and promote African cultural heritage
+            through traditional clothing. We believe in empowering local artisans by sourcing fabrics
+            and accessories locally whenever possible. Our values include integrity, community
+            engagement, and cultural pride.</p>
+
+            <h3>Why Choose Us?</h3>
+            <p>Choosing Wandy Multi Trader means supporting authentic African craftsmanship and
+            community development. Our products are not mass-produced; each piece is crafted with
+            cultural significance and attention to detail.</p>
+        </div>
+
+        <!-- Second figure element on the home page (Req 5) -->
+        <figure>
+            <img src="images/products.jpg" alt="Traditional wedding attire on display" width="260">
+            <figcaption>Custom wedding attire - a customer favourite.</figcaption>
+        </figure>
+
+        <h3 class="highlight">Special Promotion</h3>
+        <p class="highlight">Get a 10% discount on all custom orders placed this month! Visit us at the stall or contact us online for more details.</p>
+
+        <h3>Community and Cultural Impact</h3>
+        <p>Our business plays a crucial role in sustaining and promoting African cultural identity. By
+        providing access to traditional attire, we help individuals celebrate their heritage with pride.
+        We actively participate in local festivals, cultural events, and workshops to educate and
+        engage the community.</p>
+    </main>
+
+    <!-- ============ FOOTER: contact details + copyright ============ -->
+    <footer>
+        <p>
+            <a href="tel:+27725923930">&#128222; 072 592 3930 / 083 690 8540</a>
+            |
+            <a href="mailto:nowandilesamuel166@gmail.com">&#9993; nowandilesamuel166@gmail.com</a>
+        </p>
+        <p>&#169; 2026 Wandy Multi Trader</p>
+    </footer>
+
+</body>
+</html>

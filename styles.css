@@ -1,0 +1,511 @@
+/* =====================================================================
+   Wandy Multi Trader - styles.css
+   Assessment 5 base styles + Assessment 8 responsive (mobile-first)
+   additions. Comments mark which Assessment 8 requirement each rule
+   fulfils so the code can be matched back to the brief.
+   ===================================================================== */
+
+/* CSS Reset to ensure consistency across browsers
+   (Req 9.z - figure and figcaption added to the reset selectors) */
+*, figure, figcaption {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles - background color, font, line-height */
+body {
+    background-image: url("../images/lonwabo.png");
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #222;
+}
+
+/* =====================================================================
+   MOBILE-FIRST BASE STYLES (default = smallest / phone viewport)
+   ===================================================================== */
+
+/* Sticky header for persistent navigation */
+header {
+    position: sticky; /* Sticky position on mobile */
+    top: 0;
+    background-image: url("../images/forest_fireflies.jpg");
+    background-color: rgba(0, 0, 0, 0.6); /* Dark background for header */
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+/* Header title styles */
+header h1 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Req 9.a - nav style rule edited for mobile viewports: stacked block,
+   full width so it works comfortably on a small screen */
+nav {
+    width: 100%;
+}
+
+/* Req 9.b - nav ul edited for mobile viewports: vertical stack */
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;   /* stacked links on mobile */
+    align-items: center;
+    width: 100%;
+}
+
+/* Req 9.c - nav li edited for mobile viewports: full width tap targets
+   with a divider line between each link */
+nav li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+nav li:last-child {
+    border-bottom: none;
+}
+
+nav li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 12px;
+}
+
+/* Hover effect for links (base) */
+nav li a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}
+
+/* Req 9.d - style rule for the .mobile class: content that should be
+   visible on phones (essential mobile content / mobile-only info bar) */
+.mobile {
+    display: block;
+}
+
+/* Req 9.e - style rule for the .tablet-desktop class: content that is
+   hidden on phones and only revealed from the tablet breakpoint up */
+.tablet-desktop {
+    display: none;
+}
+
+/* Hero image styling */
+.hero-image {
+    width: 100%; /* Responsive full width */
+    height: auto;
+    display: block;
+}
+
+/* Req 8 (home page): quick-info div for mobile users - click-to-call /
+   click-to-navigate strip, shown as an essential mobile element */
+.mobile-info {
+    background-color: #14261a;
+    color: #fff;
+    text-align: center;
+    padding: 12px 10px;
+}
+
+.mobile-info a {
+    color: #ffe07a;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    margin: 20px auto;
+    max-width: 1200px;
+    font-size: 1.1em; /* Slightly larger font for readability */
+}
+
+/* Highlighted text for promotions */
+.highlight {
+    color: red; /* Emphasize */
+    font-weight: bold;
+}
+
+/* Req 9.cc - text-shadow applied to the h3 inside the mobile div added
+   to the home page, for extra readability over the busy background */
+.mobile-info h3,
+.mobile-content h3 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Figure styling (Req 5 - figure elements added to the home page) */
+figure {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Style for figure caption */
+figure figcaption {
+    margin-top: 8px;
+    font-style: italic;
+    font-size: 0.9em;
+    color: #ddd;
+}
+
+/* Responsive images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Additional specific styles for IDs and classes */
+#action {
+    background-color: #ffeeba; /* Highlighted promotion */
+    color: #222;
+    padding: 10px;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+/* Style for hours list in contact page */
+.hours {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Contact page - sections (Req 6 - section elements group content) */
+.contact-section {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-section:last-of-type {
+    border-bottom: none;
+}
+
+/* Map container styles (mobile default: full width, fixed height) */
+.map {
+    width: 100%;
+    height: 300px;
+    margin-top: 15px;
+    border: 0;
+}
+
+/* Style for specific product divs on products page */
+#product1, #product2, #product3, #product4, #product5, #product6 {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* External links style */
+.external-link {
+    color: #7fd0ff;
+    text-decoration: underline;
+}
+
+/* =====================================================================
+   PRODUCTS PAGE - mobile styles (Req 9.d.i - 9.d.viii)
+   main.grid holds the article/aside layout described in Req 7
+   ===================================================================== */
+
+/* Req 7.a - grid class on the main element (mobile default = single
+   column stack; becomes an actual CSS grid at tablet/desktop) */
+main.grid {
+    display: block;
+}
+
+/* Req 9.d.i - padding on the article elements */
+main.grid article {
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.55);
+    border: 1px solid #444;
+}
+
+/* Req 9.d.ii - center-align the h3 inside each article */
+main.grid article h3 {
+    text-align: center;
+}
+
+/* Req 9.d.iii - center-align the image inside each article's parent */
+main.grid article img {
+    display: block;
+    margin: 10px auto;
+}
+
+/* Req 9.d.iv - background colour applied only to the 2nd article */
+main.grid article:nth-of-type(2) {
+    background-color: rgba(90, 50, 20, 0.6);
+}
+
+/* Req 9.d.v - left margin on the unordered lists inside the articles */
+main.grid article ul {
+    margin-left: 20px;
+}
+
+/* Req 9.d.vi - style rule for the aside element */
+main.grid aside {
+    padding: 15px;
+    margin-top: 10px;
+    background-color: rgba(20, 38, 26, 0.75);
+    border: 2px dashed #ffe07a;
+}
+
+/* Req 9.d.viii - increase the size of the h3 inside the article elements */
+main.grid article h3 {
+    font-size: 1.4em;
+}
+
+/* Req 9.j - new selector for the main ul: margin bottom + left applied
+   to any unordered list that is a direct part of main content */
+main ul {
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+
+/* Req 4/9.y - div with an id created on products.html for the tablet
+   linear-gradient (mobile default keeps it simple/flat) */
+#promo {
+    background-color: #7a1f1f;
+    color: #fff;
+    padding: 12px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Footer styling */
+footer {
+    background-image: url("../images/forest_fireflies.jpg");
+    background-color: rgba(0, 0, 0, 0.6); /* Match header */
+    color: #fff;
+    text-align: center;
+    padding: 15px 10px;
+    margin-top: 20px;
+}
+
+/* Links in footer */
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Staff grid layout: 3 columns */
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: start; /* to align aside and figures properly */
+    margin-top: 20px;
+}
+
+/* Assign grid columns to each staff figure */
+.staff1 { grid-column: 1; } /* First column */
+.staff2 { grid-column: 3; } /* Third column */
+.staff3 { grid-column: 2; } /* Middle column */
+
+
+/* =====================================================================
+   Req 9.f - TABLET MEDIA QUERY (min-width: 768px)
+   ===================================================================== */
+@media screen and (min-width: 768px) {
+
+    /* Req 9.g - show/hide content for the tablet viewport: essential
+       mobile-only content is hidden, tablet/desktop content appears */
+    .mobile {
+        display: none;
+    }
+
+    .tablet-desktop {
+        display: block;
+    }
+
+    /* Req 9.h - remove the sticky position for the header at tablet size */
+    header {
+        position: static;
+    }
+
+    /* Req 9.i - list items in a single horizontal line with a border
+       shown between each link */
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav li {
+        width: auto;
+        border-bottom: none;
+        border-right: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    nav li:last-child {
+        border-right: none;
+    }
+
+    /* Req 9.l - default (auto) height/width for the embedded map at
+       tablet size, instead of the fixed mobile 300px block */
+    .map {
+        width: auto;
+        height: auto;
+        min-height: 350px;
+    }
+
+    /* Req 9.y - linear gradient applied to the #promo div for tablets */
+    #promo {
+        background: linear-gradient(135deg, #7a1f1f, #c0392b, #ffb347);
+        padding: 20px;
+    }
+
+    /* Req 9.aa - CSS grid multiple-column layout for the tablet
+       viewport, applied to the products grid */
+    main.grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        align-items: start;
+    }
+
+    /* Req 9.vii - aside spans the full width of the columns at tablet */
+    main.grid aside {
+        grid-column: 1 / -1;
+    }
+}
+
+
+/* =====================================================================
+   Req 9.m - DESKTOP MEDIA QUERY
+   Req 9.w - viewport width chosen for "desktop": 1024px, matching the
+   common breakpoint used for small laptop / desktop screens.
+   ===================================================================== */
+@media screen and (min-width: 1024px) {
+
+    /* Req 9.n - style rule for the header element at desktop size:
+       logo/title on the left, navigation area on the right */
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 30px;
+    }
+
+    header h1 {
+        margin-bottom: 0;
+        text-align: left;
+    }
+
+    /* Req 9.o - navigation area appears as a single unified element to
+       the right of the header, links evenly distributed within it */
+    nav {
+        width: auto;
+    }
+
+    /* Req 9.p - unordered list in the navigation area, desktop */
+    nav ul {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        gap: 10px;
+    }
+
+    /* Req 9.q - list item links in the navigation area, desktop */
+    nav li a {
+        padding: 10px 18px;
+        font-weight: bold;
+    }
+
+    /* Req 9.x - hover pseudo-class for the navigation links, desktop */
+    nav ul li a:hover {
+        background-color: #ffe07a;
+        color: #14261a;
+        border-radius: 6px;
+    }
+
+    /* Req 9.r - style rule for the main element, desktop */
+    main {
+        padding: 40px;
+        margin: 30px auto;
+    }
+
+    /* Req 9.s - heading elements within main, desktop */
+    main h2, main h3 {
+        font-size: 1.8em;
+        margin-bottom: 12px;
+    }
+
+    /* Req 9.t - multiple-column layout for a desktop viewport, applied
+       to the long-form "About" text on the home page */
+    .about-text {
+        column-count: 2;
+        column-gap: 40px;
+    }
+
+    /* Req 9.bb - style the new class attributes added to the home page
+       (the mobile-info div becomes an inline desktop info bar) */
+    .mobile-info {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 14px 20px;
+    }
+
+    /* Products grid becomes 3 columns on desktop */
+    main.grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* =====================================================================
+   Req 9.u - MEDIA QUERY FOR LARGE DESKTOP VIEWPORTS
+   ===================================================================== */
+@media screen and (min-width: 1440px) {
+    main {
+        max-width: 1400px;
+    }
+
+    .about-text {
+        column-count: 3;
+    }
+
+    header h1 {
+        font-size: 2.2em;
+    }
+}
+
+
+/* =====================================================================
+   Req 9.v - MEDIA QUERY FOR PRINT
+   ===================================================================== */
+@media print {
+    body {
+        background: #fff none;
+        color: #000;
+    }
+
+    header, footer, nav, .mobile-info, .map, #promo {
+        display: none; /* no need to print navigation, banners or the map */
+    }
+
+    main {
+        background: #fff;
+        color: #000;
+        box-shadow: none;
+    }
+
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+}
